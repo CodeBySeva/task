@@ -13,6 +13,8 @@ const tableView = document.querySelector('table');
 const gridView = document.querySelector('#cards-view');
 const table = document.querySelector('#table');
 const grid = document.querySelector('#grid')
+const mainTitle = document.querySelector('#title');
+
 
 table.onclick = () => {
     tableView.style.display = 'table';
@@ -40,23 +42,26 @@ const btnAddTask = document.querySelector('.add-task');
 const modal = document.querySelector('#task-modal');
 const btnCloseBtn = document.querySelector('.form-close');
 
+
 btnAddTask.onclick = () => {
     modal.style.display = 'flex';
+    mainTitle.innerHTML = 'Добавить';
+    deleteBtnInModal.style.display = 'none';
 };
 
 btnCloseBtn.onclick = () => {
     modal.style.display = 'none';
 };
 
+let form = document.forms.addNewTask;
 
-let addForm = document.forms.addNewTask;
-
-addForm.onsubmit = (event) => {
+form.onsubmit = (event) => {
     event.preventDefault();
-    
+
     let fn = new FormData(form);
-    
-    let newTask = {
+
+    let task = {
+        id: Math.random(),
         title: fn.get('title'),
         description: fn.get('description'),
         date: fn.get('date'),
@@ -64,35 +69,31 @@ addForm.onsubmit = (event) => {
         status: fn.get('status') === 'true' ? true : fn.get('status') === 'false' ? false : 'in-progress'
     };
 
-    console.log(newTask);
-    tasks.push(newTask);
-    
-    render(tasks, tableBody, TasksInTable);
-    render(tasks, cardContainer, TasksInCards);
-    
-    modal.style.display = 'none';
-    form.reset();
-};
+    if (form.id) {
+        const newTasks = tasks.map(item => {
+            if (form?.id == item.id) {
+                item = task;
+            }
 
-let editForm = document.forms.editTask;
-let currentEditTask = null;
+            return item;
+        });
 
-editForm.onsubmit = (e) => {
-    e.preventDefault()
 
-    if (currentEditTask) {
-
-        currentEditTask.title = editForm.title.value;
-        currentEditTask.description = editForm.description.value;
-        currentEditTask.date = editForm.date.value;
-        currentEditTask.time = editForm.time.value;
-        currentEditTask.status = editForm.status.value === 'true' ? true : editForm.status.value === 'false' ? false : 'in-progress';
-
-        render(tasks, tableBody, TasksInTable);
-        render(tasks, cardContainer, TasksInCards);
+        render(newTasks, tableBody, TasksInTable);
+        render(newTasks, cardContainer, TasksInCards);
 
         modal.style.display = 'none';
-        editForm.reset();
-        currentEditTask = null;
-    };
+        form.reset();
+
+        return;
+    }
+
+    tasks.push(task);
+
+    render(tasks, tableBody, TasksInTable);
+    render(tasks, cardContainer, TasksInCards);
+
+    modal.style.display = 'none';
+    form.reset();
+
 };

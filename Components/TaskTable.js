@@ -1,4 +1,8 @@
+const modal = document.querySelector('#task-modal');
+const form = document.forms.addNewTask;
+
 export function TasksInTable(item) {
+    const mainTitle = document.querySelector('#title');
 
     const tr = document.createElement('tr');
     const title = document.createElement('td');
@@ -22,15 +26,17 @@ export function TasksInTable(item) {
     iconEditTable.src = "./img/edit.512x512.png";
 
     iconEditTable.onclick = () => {
-        currentEditTask = item;
+        let currentEditTask = item;
+        mainTitle.innerHTML = 'Изменить';
 
-        title.value = currentEditTask.title;
-        description.value = currentEditTask.description;
-        date.value = currentEditTask.date;
-        time.value = currentEditTask.time;
-        status.value = currentEditTask.status === true ? 'Выполнено' : item.status === 'in-progress' ? 'В прогрессе' : 'Не выполнено';
+        form.id = item.id;
+        form.title.value = currentEditTask.title;
+        form.description.value = currentEditTask.description;
+        form.date.value = currentEditTask.date;
+        form.time.value = currentEditTask.time;
+        form.status.value = currentEditTask.status;
 
-        editForm.style.display = 'flex';
+        modal.style.display = 'flex';
     };
 
     tr.append(title, description, date, time, status, iconEditTable);

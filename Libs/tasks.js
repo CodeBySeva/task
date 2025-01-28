@@ -1,5 +1,6 @@
 export let tasks = [
     {
+        "id": 23,
         'title': 'Переписать проект на Vue 3',
         'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et  cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
         'date': '21.10.21',
@@ -7,6 +8,7 @@ export let tasks = [
         'status': false,
     },
     {
+        "id": 24,
         'title': 'Переписать проект на Vue 3',
         'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
         'date': '21.10.21',
@@ -14,6 +16,7 @@ export let tasks = [
         'status': true,
     },
     {
+        "id": 25,
         'title': 'Переписать проект на Vue 3',
         'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
         'date': '21.10.21',
@@ -21,6 +24,7 @@ export let tasks = [
         'status': true,
     },
     {
+        "id": 26,
         'title': 'Переписать проект на Vue 3',
         'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
         'date': '21.10.21',
@@ -28,6 +32,7 @@ export let tasks = [
         'status': 'in-progress',
     },
     {
+        "id": 27,
         'title': 'Переписать проект на Vue 3',
         'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
         'date': '21.10.21',
@@ -35,6 +40,7 @@ export let tasks = [
         'status': true,
     },
     {
+        "id": 28,
         'title': 'Переписать проект на Vue 3',
         'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
         'date': '21.10.21',
@@ -42,6 +48,7 @@ export let tasks = [
         'status': false,
     },
     {
+        "id": 29,
         'title': 'Переписать проект на Vue 3',
         'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
         'date': '21.10.21',

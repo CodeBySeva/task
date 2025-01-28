@@ -217,7 +217,7 @@
             line-height: 17.15px;
         }
     }
-    
+
     .status {
         width: 44px;
         height: 17px;
@@ -225,7 +225,7 @@
         font-weight: 600;
         line-height: 17.15px;
     }
-    
+
     img {
         position: absolute;
         right: 30px;
@@ -322,12 +322,11 @@
 }
 
 img {
-    /* position: absolute; */
     width: 15px;
     height: 15px;
 }
 
-tr img{
+tr img {
     position: relative;
     top: 35px;
     right: 30px;
