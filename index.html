@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Manager</title>
+</head>
+
+<body>
+    <div class="dashboard container">
+        <div class="main">
+            <div class="add-new-task main">
+                <h1>Dashboard</h1>
+                <button class="add-task">Добавить задачу</button>
+            </div>
+            <div class="search main">
+                <button class="search-by-task">Поиск по задачам</button>
+            </div>
+        </div>
+        
+        <div class="view-toggle">
+            <h3>Показать задачи как:</h3>
+            <span class="view-btn active" id="table" data-view="table">Таблица</span>
+            <span class="view-btn" id="grid" data-view="grid">Плитка</span>
+        </div>
+
+        <table class="task-table">
+            <thead id="table-view">
+                <tr>
+                    <th>Заголовок задачи</th>
+                    <th>Описание задачи</th>
+                    <th>Дата</th>
+                    <th>Время</th>
+                    <th>Выполнено</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="cards-view" class="cards"></div>
+    </div>
+
+    <div class="modal" id="task-modal">
+        <div class="modal-box">
+            <h2>Добавить</h2>
+            <div class="form-close">x</div>
+            <form name="addNewTask" name="editTask">
+                <input type="text" id="fr-title" name="title" placeholder="Заголовок">
+                <input type="text" id="fr-description" name="description" placeholder="Описание">
+                <input type="text" id="fr-time" name="time" placeholder="Время (type=time)">
+                <input type="text" id="fr-date" name="date" placeholder="Дата (type=date)">
+                <select name="status" id="task-status">
+                    <option value="false">Не выполнено</option>
+                    <option value="in-progress">В прогрессе</option>
+                    <option value="true">Готово</option>
+                </select>
+                <button type="submit">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>

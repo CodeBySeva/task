@@ -1,0 +1,51 @@
+export let tasks = [
+    {
+        'title': 'Переписать проект на Vue 3',
+        'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et  cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
+        'date': '21.10.21',
+        'time': '14:31',
+        'status': false,
+    },
+    {
+        'title': 'Переписать проект на Vue 3',
+        'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
+        'date': '21.10.21',
+        'time': '14:31',
+        'status': true,
+    },
+    {
+        'title': 'Переписать проект на Vue 3',
+        'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
+        'date': '21.10.21',
+        'time': '14:31',
+        'status': true,
+    },
+    {
+        'title': 'Переписать проект на Vue 3',
+        'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
+        'date': '21.10.21',
+        'time': '14:31',
+        'status': 'in-progress',
+    },
+    {
+        'title': 'Переписать проект на Vue 3',
+        'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
+        'date': '21.10.21',
+        'time': '14:31',
+        'status': true,
+    },
+    {
+        'title': 'Переписать проект на Vue 3',
+        'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
+        'date': '21.10.21',
+        'time': '14:31',
+        'status': false,
+    },
+    {
+        'title': 'Переписать проект на Vue 3',
+        'description': 'Quia et suscipitnsuscipit recusandae consequuntur expedita et cumnreprehenderit molestiae ut ut quas totamnnostrum rerum est autem sunt rem eveniet architecto',
+        'date': '21.10.21',
+        'time': '14:31',
+        'status': 'in-progress',
+    },
+];
